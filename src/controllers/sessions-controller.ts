@@ -31,8 +31,7 @@ class SessionsController {
       subject: user.id,
       expiresIn,
     });
-    const {password: _, ...userWithoutPassword} = user
-    response.json({ token, userWithoutPassword });
+    response.json({ token, user });
   }
 }
 
